@@ -7,14 +7,15 @@ title {
     font-weight: bold;
 }
 
+h1 {
+    text-align: center;
+}
+
 #intro {
     font-size: large;
 }
 
-table {
-    border: 2px solid skyblue;
+div.links {
+    position: relative;
+    bottom: 100px;
 }
-
-
-
-
