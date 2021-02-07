@@ -1,21 +1,10 @@
-body, title {
-    font-family: Arial, Helvetica, sans-serif;
+@font-face {
+    font-family: 'Belgates Script';
+    src: url('fonts/Belgates Script.ttf') format('truetype');
 }
 
-title {
-    font-size: larger;
-    font-weight: bold;
-}
-
-h1 {
-    text-align: center;
-}
-
-#intro {
-    font-size: large;
-}
-
-div.links {
-    position: relative;
-    bottom: 100px;
+.mainPage {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
 }
