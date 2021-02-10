@@ -1,3 +1,4 @@
+/* HOME */
 @font-face {
     font-family: 'Belgates Script';
     src: url('fonts/Belgates Script.ttf') format('truetype');
@@ -23,11 +24,11 @@
 
 .top {
     display: flex;
-    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .top .taskbar {
-    justify-content: flex-end;
     color: grey;
 }
 
@@ -44,7 +45,7 @@
     color: white;
 }
 
-body {  
+#index {  
     background-color: black;
     background-size: cover;
     background-repeat: no-repeat;
@@ -55,6 +56,31 @@ body {
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
+/* END OF HOME */
+
+/* ABOUT */
+.container {
+    /* A template column or row set to auto will adjust to the elements put inside of the rows or columns. */
+    display: grid;
+    grid-template-columns: [col1Start] auto [col1End] auto [col2End];
+    grid-template-rows: [headingStart] auto [headingEnd] auto [otherEnd];
+}
+
+/* Set as a class so that table attributes can be edited seperately. */
+.factsTable {
+    display: inline-block;
+    justify-self: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-size: 30px;
+    color: black;
+    grid-area: headingEnd / col1Start / otherEnd / col1End;
+}
+
+#tableTitle {
+    font-family: Belgates Script;
+    font-size: 50px;
+}
 
 #titleTop {
     font-family: Belgates Script;
@@ -62,6 +88,20 @@ body {
     color: white;
     order: 0;
 }
+
+#aboutHeader {
+    font-family: Belgates Script;
+    font-size: 70px;
+    color: black;
+    justify-self: center;
+    grid-area: headingStart / col1Start / headingEnd / col2End;
+}
+/* END OF ABOUT */
+
+
+
+
+
 
 
 
