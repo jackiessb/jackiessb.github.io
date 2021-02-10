@@ -1,36 +1,74 @@
-    @font-face {
-        font-family: 'Belgates Script';
-        src: url('fonts/Belgates Script.ttf') format('truetype');
+@font-face {
+    font-family: 'Belgates Script';
+    src: url('fonts/Belgates Script.ttf') format('truetype');
+}
+
+@keyframes slide {
+    0% {
+        background-image: url('images/DSC_0313.jpg');
     }
+    25% {
+        background-image: url('images/DSC_0238.JPG');
+    }
+    50% {
+        background-image: url('images/DSC_0318.JPG');
+    }
+    75% {
+        background-image: url('images/me.jpeg');
+    }
+    100% {
+        background-image: url('images/me 2.jpeg');
+    }
+}
 
-.wrapper {
-    display: grid;
-  }
-
-.heading {
+.top {
     display: flex;
-    justify-content: center;
-    font-family: Belgates Script;
-    font-size: 70px;
-    color: white;
+    flex-flow: row;
 }
 
-body {
-    background-color: black;
+.top .taskbar {
+    justify-content: flex-end;
+    color: grey;
 }
 
-li {
+.top .taskbar li {
     display: inline;
-    justify-content: left;
-    padding: 25px;
+    padding: 30px;
     font-family: Belgates Script;
-    font-size: 45px;
+    font-size: 35px;
+    order: 1;
 }
 
-li a {
+.top .taskbar li a {
     text-decoration: none;
     color: white;
 }
+
+body {  
+    background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-name: slide;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#titleTop {
+    font-family: Belgates Script;
+    font-size: 70px;
+    color: white;
+    order: 0;
+}
+
+
+
+
+
+
+
 
 
 
