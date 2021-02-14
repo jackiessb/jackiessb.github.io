@@ -56,45 +56,137 @@
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
+
+#titleTop {
+    font-family: Belgates Script;
+    font-size: 60px;
+    color: white;
+}
 /* END OF HOME */
 
 /* ABOUT */
+@keyframes slideColor {
+    0% {
+        background-color: red;
+    }
+    10% {
+        background-color: orange;
+    }
+    20% {
+        background-color: lightgoldenrodyellow;
+    }
+    30% {
+        background-color: lightgreen;
+    }
+    40% {
+        background-color: lightseagreen;
+    }
+    50% {
+        background-color: lightskyblue;
+    }
+    60% {
+        background-color: lightblue;
+    }
+    70% {
+        background-color: lightpink;
+    }
+    80% {
+        background-color: purple;
+    }
+    90% {
+        background-color: magenta;
+    }
+    100% {
+        background-color: lightcoral;
+    }
+
+}
+
 .container {
     /* A template column or row set to auto will adjust to the elements put inside of the rows or columns. */
     display: grid;
-    grid-template-columns: [col1Start] auto [col1End] auto [col2End];
-    grid-template-rows: [headingStart] auto [headingEnd] auto [otherEnd];
+    grid-template-columns: [col1Start] 1fr [col1End] 1fr [col2Start] 1fr [col2End];
+    grid-template-rows: [headingStart] auto [headingEnd] 1fr [bottomStart] auto;
 }
 
-/* Set as a class so that table attributes can be edited seperately. */
-.factsTable {
+/* Set as a class so that table attributes can be edited seperately. Having an issue grouping stuff together stil, as of Friday this week. */
+.factsTable1 {
     display: inline-block;
     justify-self: center;
     font-family: Arial, Helvetica, sans-serif;
     font-style: italic;
     font-size: 30px;
-    color: black;
-    grid-area: headingEnd / col1Start / otherEnd / col1End;
+    color: white;
+    grid-area: headingEnd / col1Start / bottomStart / col1End
+}
+
+.factsTable1 img {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 64px;
+    height: 64px;
+}
+
+.factsTable2 {
+    display: inline-block;
+    justify-self: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-size: 30px;
+    color: white;
+    grid-area: headingEnd / col1End / bottomStart / col2Start
+}
+
+.factsTable2 img {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 64px;
+    height: 64px;
+}
+
+.factsTable3 {
+    display: inline-block;
+    justify-self: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-size: 30px;
+    color: white;
+    grid-area: headingEnd / col2Start / bottomStart / col2End
+}
+
+.factsTable3 img {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 64px;
+    height: 64px;
 }
 
 #tableTitle {
-    font-family: Belgates Script;
-    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
 }
 
-#titleTop {
-    font-family: Belgates Script;
-    font-size: 70px;
+#about {
+    background-color: rgb(70, 158, 187);
+    /* The sliding colors is a cool idea but hurts the eyes a bit
+    animation-name: slideColor;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    */
+}
+
+#top {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-size: 80px;
     color: white;
-    order: 0;
-}
-
-#aboutHeader {
-    font-family: Belgates Script;
-    font-size: 70px;
-    color: black;
     justify-self: center;
-    grid-area: headingStart / col1Start / headingEnd / col2End;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    grid-area: headingStart / col1Start / headingEnd / col3End;
 }
 /* END OF ABOUT */
 
