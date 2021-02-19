@@ -23,9 +23,9 @@
 }
 
 .top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: [indexStart] auto [indexEnd];
+    grid-template-columns: [rowStart] auto [rowEnd]
 }
 
 .top .taskbar {
@@ -34,6 +34,8 @@
 
 .top .taskbar li {
     display: inline;
+    grid-area: indexStart / rowStart / indexEnd / rowEnd;
+    justify-content: end; 
     padding: 30px;
     font-family: Belgates Script;
     font-size: 35px;
@@ -58,6 +60,8 @@
 }
 
 #titleTop {
+    grid-area: indexStart / rowStart / indexEnd / rowEnd;
+    justify-content: start; 
     font-family: Belgates Script;
     font-size: 60px;
     color: white;
@@ -200,12 +204,14 @@
 
 #about {
     background-color: rgb(70, 158, 187);
+    /*
     animation-name: slideColor;
     animation-duration: 10s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+    */
 }
 
 #top {
