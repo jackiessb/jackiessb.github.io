@@ -22,29 +22,33 @@
     }
 }
 
-.top {
+.containerTop {
     display: grid;
-    grid-template-columns: [indexStart] auto [indexEnd];
-    grid-template-columns: [rowStart] auto [rowEnd]
+    grid-template-columns: [titleStart] 1fr [titleStop] 1fr [navEnd];
+    grid-template-rows: [rowTop] auto [rowTopEnd];
 }
 
-.top .taskbar {
-    color: grey;
+.nav {
+    grid-area: rowTop / titleStop / rowTopEnd / navEnd;
+    justify-self: end;
 }
 
-.top .taskbar li {
-    display: inline;
-    grid-area: indexStart / rowStart / indexEnd / rowEnd;
-    justify-content: end; 
-    padding: 30px;
+.nav ul li {
+    display: inline-block;
+    padding: 20px;
+    padding-block: 0px;
     font-family: Belgates Script;
-    font-size: 35px;
-    order: 1;
+    font-size: 45px;
 }
 
-.top .taskbar li a {
+.nav ul li a {
     text-decoration: none;
     color: white;
+}
+
+.nav ul li a:hover {
+    color: grey;
+    transition: .25s ease;
 }
 
 #index {  
@@ -60,8 +64,8 @@
 }
 
 #titleTop {
-    grid-area: indexStart / rowStart / indexEnd / rowEnd;
-    justify-content: start; 
+    grid-area: rowTop / titleStart / rowTopEnd / titleStop;
+    justify-self: start;
     font-family: Belgates Script;
     font-size: 60px;
     color: white;
@@ -106,7 +110,7 @@
 
 }
 
-.container {
+.containerAbout {
     /* A template column or row set to auto will adjust to the elements put inside of the rows or columns. */
     display: grid;
     grid-template-columns: [col1Start] 1fr [col1End] 1fr [col2Start] 1fr [col2End];
@@ -115,7 +119,7 @@
 
 /* For mobile */
 @media only screen and (max-width: 550px) {
-    .container {
+    .containerAbout {
         grid-template-columns: [Sleft] 1fr [Sright];
         grid-template-rows: [row1] 1fr [row2] 1fr [row3] 1fr [rowEnd];
     }
@@ -123,6 +127,7 @@
 
 /* Set as a class so that table attributes can be edited seperately. Having an issue grouping stuff together stil, as of Friday this week. */
 .factsTable1 {
+    grid-area: headingEnd / col1Start / bottomStart1 / col2End;
     display: inline-block;
     justify-self: center;
     font-family: Arial, Helvetica, sans-serif;
@@ -133,7 +138,6 @@
     border-radius: 100px;
     padding: 10px;
     margin-bottom: 50px;
-    grid-area: headingEnd / col1Start / bottomStart1 / col2End;
 }
 
 .factsTable1 img {
@@ -148,6 +152,7 @@
 }
 
 .factsTable2 {
+    grid-area: bottomStart1 / col1Start / bottomEnd1 / col2End;
     display: inline-block;
     justify-self: center;
     font-family: Arial, Helvetica, sans-serif;
@@ -158,7 +163,6 @@
     border-radius: 100px;
     padding: 10px;
     margin-bottom: 50px;
-    grid-area: bottomStart1 / col1Start / bottomEnd1 / col2End;
 }
 
 .factsTable2 img {
@@ -173,6 +177,7 @@
 }
 
 .factsTable3 {
+    grid-area: bottomStart2 / col1Start / bottomEnd2 / col2End;
     display: inline-block;
     justify-self: center;
     font-family: Arial, Helvetica, sans-serif;
@@ -183,7 +188,6 @@
     border-radius: 100px;
     padding: 10px;
     margin-bottom: 50px;
-    grid-area: bottomStart2 / col1Start / bottomEnd2 / col2End;
 }
 
 .factsTable3 img {
@@ -215,22 +219,38 @@
 }
 
 #top {
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: oblique;
-    font-size: 80px;
+    grid-area: headingStart / col1Start / headingEnd / col3End;
+    font-family: Belgates Script;
+    font-size: 90px;
     color: white;
     background-color: gray;
     border-radius: 100px;
-    padding: 20px;
+    padding-inline: 70px;
     justify-self: center;
     margin-top: 30px;
     margin-bottom: 50px;
-    grid-area: headingStart / col1Start / headingEnd / col3End;
 }
 /* END OF ABOUT */
 
+/* PORTFOLIO */
+.containerPortfolio {
+    display: grid;
+}
 
+#portfolio {
+    background-color: rgb(22, 172, 89);
+}
+/* END OF PORTFOLIO */
 
+/* RESUME */
+.containerResume {
+    display: grid;
+}
+
+#resume {
+    background-color: rgb(214, 50, 50);
+}
+/* END OF RESUME */
 
 
 
