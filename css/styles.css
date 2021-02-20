@@ -73,6 +73,215 @@
 /* END OF HOME */
 
 /* ABOUT */
+.containerAbout {
+    /* A template column or row set to auto will adjust to the elements put inside of the rows or columns. */
+    display: grid;
+    grid-template-columns: [col1Start] 1fr [col1End] 1fr [col2Start] 1fr [col2End];
+    grid-template-rows: [headingStart] auto [headingEnd] 1fr [bottomStart1] auto [bottomEnd1] auto [bottomStart2] auto [bottomEnd2];
+}
+
+/* For mobile */
+@media only screen and (max-width: 550px) {
+    .containerAbout {
+        grid-template-columns: [Sleft] 1fr [Sright];
+        grid-template-rows: [row1] 1fr [row2] 1fr [row3] 1fr [rowEnd];
+    }
+}
+
+/* Set as a class so that table attributes can be edited seperately. Having an issue grouping stuff together stil, as of Friday this week. */
+.interests {
+    grid-area: headingEnd / col1Start / bottomStart1 / col2End;
+    display: inline-block;
+    justify-self: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-size: 30px;
+    color: white;
+    background-color: gray;
+    border-radius: 100px;
+    padding: 10px;
+    margin-bottom: 50px;
+}
+
+.interests img {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 64px;
+    height: 64px;
+}
+
+.interests tr {
+    text-align: center;
+}
+
+.whereFrom {
+    grid-area: bottomStart1 / col1Start / bottomEnd1 / col2End;
+    display: inline-block;
+    justify-self: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-size: 30px;
+    color: white;
+    background-color: gray;
+    border-radius: 100px;
+    padding: 10px;
+    margin-bottom: 50px;
+}
+
+.whereFrom img {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 64px;
+    height: 64px;
+}
+
+.whereFrom tr {
+    text-align: center;
+}
+
+.hobbies {
+    grid-area: bottomStart2 / col1Start / bottomEnd2 / col2End;
+    display: inline-block;
+    justify-self: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-size: 30px;
+    color: white;
+    background-color: gray;
+    border-radius: 100px;
+    padding: 10px;
+    margin-bottom: 50px;
+}
+
+.hobbies img {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 64px;
+    height: 64px;
+}
+
+.hobbies tr {
+    text-align: center;
+}
+
+#tableTitle {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+
+#about {
+    background-color: rgb(70, 158, 187);
+}
+
+#top {
+    grid-area: headingStart / col1Start / headingEnd / col3End;
+    font-family: Belgates Script;
+    font-size: 90px;
+    color: white;
+    background-color: gray;
+    border-radius: 100px;
+    padding-inline: 70px;
+    justify-self: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+/* END OF ABOUT */
+
+/* PORTFOLIO */
+.containerPortfolio {
+    display: grid;
+    grid-template-columns: [cStart] 1fr [finish];
+    grid-template-rows: repeat(5, 1fr);
+    row-gap: 7px;
+}
+
+.line1 {
+    background-color: gray;
+    border-radius: 100px;
+}
+
+.line2 {
+    background-color: gray;
+    border-radius: 100px;
+}
+
+.line3 {
+    background-color: gray;
+    border-radius: 100px;
+}
+
+.line4 {
+    background-color: gray;
+    border-radius: 100px;
+}
+
+.line5 {
+    background-color: gray;
+    border-radius: 100px;
+}
+
+#portfolio {
+    background-color: rgb(22, 172, 89);
+}
+
+#topPortfolio {
+    font-family: Belgates Script;
+    font-size: 90px;
+    color: white;
+    background-color: gray;
+    border-radius: 100px;
+    padding-inline: 70px;
+    justify-self: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+/* END OF PORTFOLIO */
+
+/* RESUME */
+.containerResume {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 7px;
+}
+
+.education {
+    grid-area: 2 / 1 / 5 / 2;
+    background-color: gray;
+    border-radius: 100px;
+}
+
+.workExperience {
+    grid-area: 2 / 2 / 3 / 3;
+    background-color: gray;
+    border-radius: 100px;
+}
+
+.skills {
+    grid-area: 3 / 2 / 5 / 3;
+    background-color: gray;
+    border-radius: 100px;
+}
+
+#resume {
+    background-color: rgb(214, 50, 50);
+}
+
+#topResume {
+    grid-area: 1 / 1 / 2 / 3;
+    font-family: Belgates Script;
+    font-size: 90px;
+    color: white;
+    background-color: gray;
+    border-radius: 100px;
+    padding-inline: 70px;
+    justify-self: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+/* END OF RESUME */
+
+/* EXTRA STUFF NOT USED BUT THAT I MADE FOR THE SITE */
 @keyframes slideColor {
     0% {
         background-color: red;
@@ -109,149 +318,7 @@
     }
 
 }
-
-.containerAbout {
-    /* A template column or row set to auto will adjust to the elements put inside of the rows or columns. */
-    display: grid;
-    grid-template-columns: [col1Start] 1fr [col1End] 1fr [col2Start] 1fr [col2End];
-    grid-template-rows: [headingStart] auto [headingEnd] 1fr [bottomStart1] auto [bottomEnd1] auto [bottomStart2] auto [bottomEnd2];
-}
-
-/* For mobile */
-@media only screen and (max-width: 550px) {
-    .containerAbout {
-        grid-template-columns: [Sleft] 1fr [Sright];
-        grid-template-rows: [row1] 1fr [row2] 1fr [row3] 1fr [rowEnd];
-    }
-}
-
-/* Set as a class so that table attributes can be edited seperately. Having an issue grouping stuff together stil, as of Friday this week. */
-.factsTable1 {
-    grid-area: headingEnd / col1Start / bottomStart1 / col2End;
-    display: inline-block;
-    justify-self: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: italic;
-    font-size: 30px;
-    color: white;
-    background-color: gray;
-    border-radius: 100px;
-    padding: 10px;
-    margin-bottom: 50px;
-}
-
-.factsTable1 img {
-    padding-left: 20px;
-    padding-right: 20px;
-    width: 64px;
-    height: 64px;
-}
-
-.factsTable1 tr {
-    text-align: center;
-}
-
-.factsTable2 {
-    grid-area: bottomStart1 / col1Start / bottomEnd1 / col2End;
-    display: inline-block;
-    justify-self: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: italic;
-    font-size: 30px;
-    color: white;
-    background-color: gray;
-    border-radius: 100px;
-    padding: 10px;
-    margin-bottom: 50px;
-}
-
-.factsTable2 img {
-    padding-left: 20px;
-    padding-right: 20px;
-    width: 64px;
-    height: 64px;
-}
-
-.factsTable2 tr {
-    text-align: center;
-}
-
-.factsTable3 {
-    grid-area: bottomStart2 / col1Start / bottomEnd2 / col2End;
-    display: inline-block;
-    justify-self: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: italic;
-    font-size: 30px;
-    color: white;
-    background-color: gray;
-    border-radius: 100px;
-    padding: 10px;
-    margin-bottom: 50px;
-}
-
-.factsTable3 img {
-    padding-left: 20px;
-    padding-right: 20px;
-    width: 64px;
-    height: 64px;
-}
-
-.factsTable3 tr {
-    text-align: center;
-}
-
-#tableTitle {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 30px;
-}
-
-#about {
-    background-color: rgb(70, 158, 187);
-    /*
-    animation-name: slideColor;
-    animation-duration: 10s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    */
-}
-
-#top {
-    grid-area: headingStart / col1Start / headingEnd / col3End;
-    font-family: Belgates Script;
-    font-size: 90px;
-    color: white;
-    background-color: gray;
-    border-radius: 100px;
-    padding-inline: 70px;
-    justify-self: center;
-    margin-top: 30px;
-    margin-bottom: 50px;
-}
-/* END OF ABOUT */
-
-/* PORTFOLIO */
-.containerPortfolio {
-    display: grid;
-}
-
-#portfolio {
-    background-color: rgb(22, 172, 89);
-}
-/* END OF PORTFOLIO */
-
-/* RESUME */
-.containerResume {
-    display: grid;
-}
-
-#resume {
-    background-color: rgb(214, 50, 50);
-}
-/* END OF RESUME */
-
+/* END OF EXTRA STUFF */
 
 
 
