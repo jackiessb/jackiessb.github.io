@@ -25,30 +25,44 @@
 .containerTop {
     display: grid;
     grid-template-columns: [titleStart] 1fr [titleStop] 1fr [navEnd];
-    grid-template-rows: [rowTop] auto [rowTopEnd];
+    grid-template-rows: [rowTop] auto [rowTopEnd] auto [rowLastEnd];
 }
 
-.nav {
+.navMenu {
     grid-area: rowTop / titleStop / rowTopEnd / navEnd;
     justify-self: end;
 }
 
-.nav ul li {
+.navMenu ul li {
     display: inline-block;
     padding: 20px;
     padding-block: 0px;
     font-family: Belgates Script;
     font-size: 45px;
+    color: white;
 }
 
-.nav ul li a {
+.navMenu ul li a {
     text-decoration: none;
     color: white;
 }
 
-.nav ul li a:hover {
+.navMenu ul li a:hover {
     color: grey;
     transition: .25s ease;
+}
+
+/* Socials layout is still bugged :( */
+.socials a img {
+    width: 64px;
+    height: 64px;
+}
+
+#instaPNG {
+    /* Had to seperate this for weird reasons but it still works nonetheless */
+    width: 50px;
+    height: 50px;
+    padding-bottom: 10px;
 }
 
 #index {  
@@ -57,8 +71,7 @@
     background-repeat: no-repeat;
     animation-name: slide;
     animation-duration: 10s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+    animation-timing-function: ease;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
@@ -80,14 +93,6 @@
     grid-template-rows: [headingStart] auto [headingEnd] 1fr [bottomStart1] auto [bottomEnd1] auto [bottomStart2] auto [bottomEnd2];
 }
 
-/* For mobile */
-@media only screen and (max-width: 550px) {
-    .containerAbout {
-        grid-template-columns: [Sleft] 1fr [Sright];
-        grid-template-rows: [row1] 1fr [row2] 1fr [row3] 1fr [rowEnd];
-    }
-}
-
 /* Set as a class so that table attributes can be edited seperately. Having an issue grouping stuff together stil, as of Friday this week. */
 .interests {
     grid-area: headingEnd / col1Start / bottomStart1 / col2End;
@@ -100,7 +105,7 @@
     background-color: gray;
     border-radius: 100px;
     padding: 10px;
-    margin-bottom: 50px;
+    margin-bottom: 7px;
 }
 
 .interests img {
@@ -125,7 +130,7 @@
     background-color: gray;
     border-radius: 100px;
     padding: 10px;
-    margin-bottom: 50px;
+    margin-bottom: 7px;
 }
 
 .whereFrom img {
@@ -150,7 +155,7 @@
     background-color: gray;
     border-radius: 100px;
     padding: 10px;
-    margin-bottom: 50px;
+    margin-bottom: 7px;
 }
 
 .hobbies img {

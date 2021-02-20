@@ -9,5 +9,5 @@ FOR MY SICK WEBSITE BABY
 * Website is fully functional! Need to build the following things:
 * Faster image loading times
 * Moblie support
-* Resume and Portfolio pages
+* Resume and Portfolio pages (template finished)
 * Socials Links
