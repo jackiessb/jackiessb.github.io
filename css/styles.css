@@ -56,6 +56,7 @@
 .socials a img {
     width: 64px;
     height: 64px;
+    justify-content: center;
 }
 
 #instaPNG {
@@ -66,7 +67,7 @@
 }
 
 #index {  
-    background-color: black;
+    background-image: url('images/DSC_0313.JPG');
     background-size: cover;
     background-repeat: no-repeat;
     animation-name: slide;
@@ -82,6 +83,28 @@
     font-family: Belgates Script;
     font-size: 60px;
     color: white;
+}
+
+/* MOBILE ADJUSTMENT */
+@media screen and (max-width: 1120px)
+{
+    #index {
+        animation-name: none;
+        background-image: none;
+        background-color: rgb(223, 165, 58);
+    }
+
+    #titleTop {
+        grid-area: rowTop / titleStart / rowTopEnd / navEnd;
+        justify-self: center;
+        font-size: 50px;
+    }
+    
+    .navMenu {
+        grid-area: rowTop / titleStart / rowTopEnd / navEnd;
+        justify-self: center;
+        padding-top: 80px;
+    }
 }
 /* END OF HOME */
 

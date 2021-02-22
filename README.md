@@ -11,3 +11,8 @@ FOR MY SICK WEBSITE BABY
 * Moblie support
 * Resume and Portfolio pages (template finished)
 * Socials Links
+
+## UPDATE (2/22/21)
+* Began working on mobile support, still need to finish constructing the rest of the pages though
+* In order to get faster image loading times, I would probably need better hosting. We will see.
+* I can also look into getting a CDN for the images I wanna render.
