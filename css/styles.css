@@ -85,7 +85,7 @@
     color: white;
 }
 
-/* MOBILE ADJUSTMENT */
+/* MOBILE SUPPORT */
 @media screen and (max-width: 1120px)
 {
     #index {
@@ -97,13 +97,65 @@
     #titleTop {
         grid-area: rowTop / titleStart / rowTopEnd / navEnd;
         justify-self: center;
-        font-size: 50px;
+        font-size: 80px;
     }
+
+    #aboutButton {
+        margin-top: 100px;
+        background-color: rgb(70, 158, 187);
+    }
+
+    #aboutButton a {
+        margin-right: 10px;
+    }
+
+    #portButton {
+        background-color: rgb(22, 172, 89);
+    }
+
+    #resButton {
+        background-color: rgb(214, 50, 50);
+    }
+
+    #instaPNG {
+        width: 100px;
+        height: 100px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+    }    
     
     .navMenu {
         grid-area: rowTop / titleStart / rowTopEnd / navEnd;
         justify-self: center;
         padding-top: 80px;
+    }
+
+    .navMenu ul {
+        text-align: center;
+    }
+
+    .navMenu ul li {
+        display: block;
+        justify-content: center;
+        font-size: 70px;
+        margin-bottom: 50px;
+        border-radius: 100px;
+    }
+
+    .socials {
+        grid-area: rowTopEnd / titleStart / rowLastEnd / navEnd;
+        background-color: gray;
+        border-radius: 100px;
+        justify-self: center;
+        padding: 20px;
+        margin-left: 50px;
+        margin-top: 10px;
+    }
+
+    .socials a img {
+        width: 150px;
+        height: 150px;
+        padding-left: 15px;
     }
 }
 /* END OF HOME */
