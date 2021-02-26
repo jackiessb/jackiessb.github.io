@@ -25,7 +25,7 @@
 .containerTop {
     display: grid;
     grid-template-columns: [titleStart] 1fr [titleStop] 1fr [navEnd];
-    grid-template-rows: [rowTop] auto [rowTopEnd] auto [rowLastEnd];
+    grid-template-rows: [rowTop] auto [rowTopEnd] auto [rowLastEnd] auto [end];
 }
 
 .navMenu {
@@ -52,6 +52,10 @@
     transition: .25s ease;
 }
 
+.socials {
+    grid-area: rowTopEnd / titleStart / rowLastEnd / titleStop;
+}
+
 /* Socials layout is still bugged :( */
 .socials a img {
     width: 64px;
@@ -60,21 +64,19 @@
 }
 
 .learnToCode {
-    grid-area: rowTopEnd / titleStart / rowLastEnd / navEnd;
+    grid-area: rowTopEnd / titleStart / end / navEnd;
     justify-self: center;
     font-family: Belgates Script;
-    font-size: 45px;
-    background-color: grey;
+    font-size: 35px;
+    background-color: rgb(87, 153, 87);
+    border-radius: 100px;
+    padding-right: 10px;
+    margin-top: 250px;
 }
 
 .learnToCode a {
     text-decoration: none;
     color: white;
-}
-
-.learnToCode a:hover {
-    color: grey;
-    transition: .25s ease;
 }
 
 #instaPNG {
@@ -85,7 +87,7 @@
 }
 
 #index {  
-    background-image: url('images/me\ 2.jpeg');
+    background-image: url('images/me.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     /*
@@ -170,13 +172,21 @@
         justify-self: center;
         padding: 20px;
         margin-left: 50px;
-        margin-top: 10px;
+        margin-top: 10px;   
     }
 
     .socials a img {
         width: 150px;
         height: 150px;
         padding-left: 15px;
+    }
+
+    .learnToCode {
+        grid-row-start: rowLastEnd;
+        justify-self: center;
+        margin-top: 100px;
+        font-size: 50px;
+        text-align: center; 
     }
 }
 /* END OF HOME */
@@ -381,6 +391,18 @@
     margin-bottom: 50px;
 }
 /* END OF RESUME */
+
+/* CODING */
+.containerCoding {
+    display: grid;
+    grid-template-columns: [pageFarLeft] 1fr [pageMiddleStart] 1fr [pageEnd];
+    grid-template-rows: [buttonStart] 1fr [buttonEnd] 1fr [presStart] 1fr [presEnd];
+}
+
+.section1 {
+    grid-area: presStart / pageMiddleStart / presEnd / pageEnd;
+}
+/* END OF CODING */
 
 /* EXTRA STUFF NOT USED BUT THAT I MADE FOR THE SITE */
 @keyframes slideColor {
