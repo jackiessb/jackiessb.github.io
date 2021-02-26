@@ -16,3 +16,7 @@ FOR MY SICK WEBSITE BABY
 * Began working on mobile support, still need to finish constructing the rest of the pages though
 * In order to get faster image loading times, I would probably need better hosting. We will see.
 * I can also look into getting a CDN for the images I wanna render.
+
+## UPDATE (2/23/21)
+* Having more issues with image loading and styling. The website will now only format in http and not https.
+* My SSL is certified so that's definitely not the issue...

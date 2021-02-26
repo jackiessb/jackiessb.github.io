@@ -59,6 +59,24 @@
     justify-content: center;
 }
 
+.learnToCode {
+    grid-area: rowTopEnd / titleStart / rowLastEnd / navEnd;
+    justify-self: center;
+    font-family: Belgates Script;
+    font-size: 45px;
+    background-color: grey;
+}
+
+.learnToCode a {
+    text-decoration: none;
+    color: white;
+}
+
+.learnToCode a:hover {
+    color: grey;
+    transition: .25s ease;
+}
+
 #instaPNG {
     /* Had to seperate this for weird reasons but it still works nonetheless */
     width: 50px;
@@ -67,14 +85,17 @@
 }
 
 #index {  
-    background-image: url('images/DSC_0313.JPG');
+    background-image: url('images/me\ 2.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
+    /*
+    Turning off animations for now. Getting too laggy.
     animation-name: slide;
     animation-duration: 10s;
     animation-timing-function: ease;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+    */
 }
 
 #titleTop {
