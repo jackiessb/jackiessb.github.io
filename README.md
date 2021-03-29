@@ -20,3 +20,6 @@ FOR MY SICK WEBSITE BABY
 ## UPDATE (2/23/21)
 * Having more issues with image loading and styling. The website will now only format in http and not https.
 * My SSL is certified so that's definitely not the issue...
+
+## UPDATE (3/29/21)
+* Having issue with .gitignore
